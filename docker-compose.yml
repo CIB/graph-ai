@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  # ChromaDB service
+  chromadb:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"  # Expose ChromaDB port
+
+  # Neo4j service
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"  # Expose Neo4j default port
+      - "7687:7687"  # Expose Neo4j Bolt protocol port
+    environment:
+      - NEO4J_AUTH=neo4j/password
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+      - NEO4J_apoc_import_file_use__neo4j__config=true
+      - NEO4JLABS_PLUGINS=["apoc"]

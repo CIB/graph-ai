@@ -1,0 +1,11 @@
+{
+  "extends": "../.nuxt/tsconfig.server.json",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "Node",
+      "esModuleInterop": true
+    },
+    "require": ["tsconfig-paths/register"]
+  }
+}

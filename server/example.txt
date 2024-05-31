@@ -1,0 +1,1952 @@
+4:10
+Hi, everybody.
+
+4:10
+Can you hear me?
+
+4:13
+Yeah.
+
+4:14
+Nice.
+
+4:16
+All right.
+
+4:16
+How are you?
+
+4:18
+Fine.
+
+4:18
+And you, and, and you?
+
+4:21
+Yeah.
+
+4:21
+Good, good.
+
+4:23
+So far Jeffrey before I forget it.
+
+4:26
+Can you, can you, after the meeting, please check the, the order for the auction this evening?
+
+4:33
+Ok.
+
+4:33
+Got you did everything you said.
+
+4:35
+Well, because it will be the first meeting where,, where I will not be there.
+
+4:43
+, but Romina is therefore to make the local bids.
+
+4:48
+, and I just want to be sure that everything is working.
+
+4:52
+Well, I'm here in the office and watch it from here.
+
+4:55
+, yeah, here is Christian also.
+
+5:04
+Hi, Christian.
+
+5:05
+Hi.
+
+5:08
+Ok.
+
+5:09
+, probably who will start?
+
+5:14
+, how is that?
+
+5:21
+Ok.
+
+5:23
+Yeah, I can share my screen.
+
+5:28
+Mhm.
+
+5:29
+Mhm.
+
+5:29
+, oh, I have to,, restart,, my Zoom.
+
+5:52
+, one moment.
+
+5:59
+I did not understand.
+
+6:00
+What did you say?
+
+6:01
+, he said he will restart,, his,, zoom.
+
+6:16
+Ok.
+
+6:17
+Yeah.
+
+6:18
+Ok.
+
+6:25
+And the teams.
+
+6:25
+Christian is also not here.
+
+6:37
+Ok.
+
+6:38
+, yeah, sure.
+
+6:40
+There's green again.
+
+6:41
+Why to change Christian is not here.
+
+6:45
+No.
+
+7:58
+Where is Christian?
+
+8:03
+Oh, yes.
+
+8:04
+, he's back.
+
+8:06
+Oh, he's back.
+
+8:07
+Ok.
+
+8:07
+Good.
+
+8:10
+OK.
+
+8:15
+As Trisha ask about the project structure.
+
+8:22
+And I I will start from, from, from there and we choose to use to implementing features by domain and by domains, I mean a features that belong to an entity.
+
+8:44
+And for example, everything that's belongs to ocean, we have, we have a code here in ocean folder and that is on in domain territory.
+
+9:02
+We have every controllers about ocean inside the ocean domain.
+
+9:11
+And we have admin and also fronts codes in the corresponding folder here.
+
+9:21
+You can see only admin because right now if we focus on admin codes implementing and they show it entities are inside the app folder, a default app folder of Arvel, for example, countries ring that will be shared by all domains.
+
+9:50
+So we have countries language languages, time zone setting and so on.
+
+10:02
+And so we have here, but here we have also some API is already implemented, but we have not yet moved to their own domain.
+
+10:18
+And because we are not yet working on that, but they're already implemented.
+
+10:26
+All you're seeing here are already implemented.
+
+10:31
+We have the test, unit test and integration test, architectural test.
+
+10:39
+Also implemented for all our codes.
+
+10:43
+There is no any code that does not have a test.
+
+10:49
+We have a test for all our, our code.
+
+10:56
+Basically, that is the only difference that I can say besides the different structure we have for for comparing to the actual system that we have.
+
+11:13
+the only difference we have here is that we have a domains that contain entity codes.
+
+11:23
+That is the only difference we have compared to the default Leno switcher.
+
+11:35
+Besides this, we have for for easy implementation of, for developers that will be integrating the API to the front end, we have a pack a package that helped us to have a list of all our API S.
+
+11:58
+So here is the, all the A P A that we already implemented and have besides having just implementation, you can interact directly with this application by sending the request and have the response directly with this tool.
+
+12:27
+Just we love be available on production.
+
+12:33
+This is just for development development.
+
+12:39
+It will be available on on our server or in local.
+
+12:48
+So we have in total this number of BP I request that we already implemented.
+
+12:58
+And just by checking to check for the test that I talked about, we can see our pipeline that we have.
+
+13:11
+Oh sorry, I see here the pipeline about the tests.
+
+13:24
+We have this number of tests that already passed about this.
+
+13:31
+These are the implementations that we, we have done that I was talking about and that are here in this show and then that needs to be moved later to the, to the corresponding domains.
+
+13:53
+So it is because if you don't, you have not moved them yet to the domains.
+
+14:02
+So we, we set that as to do but they are already implementing.
+
+14:09
+So we, we set it as to do to to, to know that there is something that we have to to pay attention to so to, to not forget.
+
+14:23
+But here are all the total tests that we, we already implemented.
+
+14:31
+And so I can just make a quick test.
+
+14:41
+Yeah.
+
+14:47
+We have implemented the auto application as we have in the current system, we have a default super admin account that is created by a cer.
+
+15:01
+But later, when you put a ticket with that account, you can change the password and, and, and so on can also set the two factor authentication for, for that account.
+
+15:21
+So here we the email that she was apply.
+
+15:33
+So the password I think took the photo password.
+
+15:38
+Yes, the default is the password also.
+
+15:42
+And when we have here is it at the authentication booking that will be used,, to send request to the application.
+
+15:57
+We don't use no more,, cookies.
+
+16:01
+No, it will not,, use cookies because right now,, the API, is,, at its own and the front end,, is a separated application.
+
+16:14
+So,, it will not be using the cookie but an authentication token.
+
+16:19
+And this token also,, will be used by the,, real time application to,, to check, to verify the user that is making a request, for example, bidding and so on.
+
+16:38
+So here I can use that token.
+
+16:45
+For example, let's say I want to check the permissions.
+
+16:56
+You all request that has the this middleware, we need to to put a ticket to assess the resource.
+
+17:13
+Here, I can set the authentication.
+
+17:17
+This is the previous token that I was using.
+
+17:21
+OK.
+
+17:22
+For example, if I just delete this, the response is that I'm not authenticated so I can sit to that, I just got it.
+
+17:48
+That is to the pain.
+
+17:50
+Yes.
+
+17:52
+And I have all the permissions permissions that we have set.
+
+17:58
+Now is for all the A P A that we have here, we created a permission for each of them and by ac so it will not be of charge of admin or super admin to create the permissions.
+
+18:18
+So permissions are already exist for each entity and you will just create permission groups and rules using this this permissions.
+
+18:32
+So I can, for example, just to demonstrate about what I think that Christian also talks about some yesterday.
+
+18:48
+And no give him if, if an answer about the query with that I will come back, I will come to it in some moment.
+
+19:00
+Let's hear.
+
+19:04
+OK.
+
+19:04
+I have, I already have the permission group here.
+
+19:08
+Let's create another one.
+
+19:17
+Yeah.
+
+19:18
+OK.
+
+19:19
+Here is the previous response of the test that I've done just because I, I have set in the setting to save the response in for storage.
+
+19:32
+That's if one minute I see the post.
+
+19:45
+OK?
+
+19:46
+The count is for some problem.
+
+19:56
+It is a permission group that I can oh for example, here, the name and description are are trans so I can add different translations.
+
+20:23
+OK?
+
+20:23
+It is just OK.
+
+21:07
+We is active field is is not required because it is true by default.
+
+21:15
+But when creating a record we can all we can set it to be a false.
+
+21:25
+So right now I will let this to be true.
+
+21:29
+And here we give, we set the idea of our permissions.
+
+21:36
+Let's see, let's see one.
+
+21:42
+She's OK.
+
+21:50
+Here is the new permission group that I just created.
+
+21:58
+And you can notice that there is no there is no information about the permissions that is set for this permission groups.
+
+22:14
+But when the id is to getting this, I can add, for example, here that II I want yeah.
+
+22:28
+here is, is the release of product of permission groups that I have.
+
+22:33
+But if I want also to see the permissions that of each of the permission groups, I can set a query parameter on the request that I want to to also have the permissions of in of the permission groups.
+
+23:02
+And I have for each permission permission group.
+
+23:05
+It's the conditions also.
+
+23:10
+So this is for only the we get request that we, we add this feature to, we have the possibility also on the request to, to set a filter to, to say I just want only permissions that for example, contain his name and so on.
+
+23:36
+If that permission don't belongs to the parent entity, it will not be shown at all.
+
+23:45
+So this is because we use repositories.
+
+23:53
+And what for example, just for the product group, I can just here, for example, we said that we can filter by name filter by description is also possible to include for in response, the permissions relation.
+
+24:18
+This is only available for admin.
+
+24:21
+This is not exposed to the F no, this is just available in admin request.
+
+24:32
+So it is to make easy, it's easier if the admin want to make some filtering or have some informations about an R TT relations and so on.
+
+24:47
+So this this is how it works for all the anti it is the same for all these API S.
+
+24:57
+So each each entity has eight filters for, for example, as the current.
+
+25:07
+No, we don't have it for currency.
+
+25:11
+For whole, for example, it has a filter for an entitled description permissions for us and mission groups.
+
+25:22
+So, and basically it is how it works for everything we have implemented yet.
+
+25:43
+Do you have special?
+
+25:50
+Sorry, I didn't follow you quite.
+
+25:52
+So you showed me you have some filters and so on.
+
+25:57
+Is this now on the back end that we have these filters or is this on the API that we have these filters?
+
+26:08
+Yes, we, we have them on in this back.
+
+26:13
+So it is not just in this using this request docs.
+
+26:19
+No, it is available on the endpoint tracking.
+
+26:25
+OK.
+
+26:25
+So how does it work on the point?
+
+26:26
+Can you please explain that again?
+
+26:28
+I didn't quite follow that.
+
+26:30
+OK.
+
+26:33
+Here we have a story.
+
+26:38
+A story is just to centralize to request as you request that will be sent to database for repository is not the repository in itself is not something I can talk to as a client, right?
+
+26:59
+It's something I can use in the LA PHP, right?
+
+27:02
+Yes.
+
+27:03
+OK.
+
+27:04
+So you are asking about how is it?
+
+27:09
+it, it is implemented, right?
+
+27:12
+No, I'm asking what you're showing now is when we now want to write code in the client.
+
+27:23
+And I want to filter some data or whatever, how is it then implemented in the world?
+
+27:28
+Yes.
+
+27:29
+OK.
+
+27:31
+All the filtering and all and so on are just by are just by query parameters.
+
+27:39
+OK.
+
+27:39
+And do, do, do, do you have to define the filter parameters manually?
+
+27:48
+Yes.
+
+27:49
+Each for example for here, that's one moment.
+
+27:57
+says permission that I just put it on.
+
+28:00
+please.
+
+28:01
+Christian.
+
+28:02
+Can you repeat your question?
+
+28:04
+Yes.
+
+28:04
+I, so I'm wondering, Eric now described how do you define filters on the database?
+
+28:12
+I get that part.
+
+28:13
+But now if I want in the browser to talk to the API and I want to, for example, filter the data.
+
+28:20
+How do you do this?
+
+28:23
+OK.
+
+28:25
+Here.
+
+28:26
+For example, here is a kid.
+
+28:29
+I just I'll just go back to this here or maybe I can also do it in Postman.
+
+28:38
+Is it clear if I do it here.
+
+28:41
+Is it the same?
+
+28:44
+Yeah.
+
+28:44
+When doing just a a a get request You will just set a query parameter here and say just I, I want to, I want to filter, for example, filter.
+
+29:07
+For example, here I have put that yes, I can shoot up by name, for example, so I can see the So men, I mean, I think I get what you're saying but actually my big question is not, how do I do it now?
+
+29:48
+But where is it defined that this filter exists on the back end?
+
+29:57
+You mean?
+
+29:57
+Yes.
+
+29:59
+Yeah.
+
+29:59
+we are using the package for, for that.
+
+30:03
+But very good to do that.
+
+30:05
+So maybe let me send the link here and Chris and Eric will open it.
+
+30:19
+Where is it?
+
+30:24
+Yeah.
+
+30:29
+So we want a load.
+
+30:31
+all the filters that we we define here Are just the one that you can use, for example, for a permission group.
+
+30:40
+If you said something else, it will not work.
+
+30:45
+For example, so the request for filtering, for example, what I'm not getting now, is this package?
+
+30:53
+What is it for?
+
+30:54
+Is it for making it easier or in the PHP to do an operation like filter or is it to modify the route to add this filter to the route?
+
+31:07
+That's what is not clear to me.
+
+31:11
+It is it is, it is used for it is to make it easier for, for you for, it's a simple integrating from the client if you have to do some filtering instead of to do it, if you want to filter.
+
+31:30
+The Yeah, I get you.
+
+31:32
+This was my question.
+
+31:33
+So this is what you have right now.
+
+31:35
+This will change the, the API route that is exposed to the client, right?
+
+31:43
+Is it, you know, change your world?
+
+31:48
+No, it must because the world of course, must have now access to this property, this filter, right?
+
+31:57
+Christen the package used a concept.
+
+32:02
+Some developers use post I mean a post method to filter to sort and so on.
+
+32:09
+But this package used the curry query balance to to do that.
+
+32:15
+Yeah, that's fine.
+
+32:15
+No, no, no.
+
+32:16
+What I'm asking is this is about security, don't you get that?
+
+32:21
+I'm asking we now give access to, to our to, to someone talking to the back end to have this filter method.
+
+32:31
+And I'm just asking where does it come from?
+
+32:33
+How do we control it?
+
+32:37
+Yes.
+
+32:38
+And that is what I was just explaining here.
+
+32:42
+For example, that for example, when we sit here that the filters that we that we allow is just the name and, and description for this, but it means the code you write here it influences our pub public api it influences what can someone from the browser access, right?
+
+33:06
+This code influences that.
+
+33:11
+No, not about what can I say something?
+
+33:15
+Yeah.
+
+33:17
+the the package does not modify anything.
+
+33:23
+What the package does behind is to get in the request if you send, for example, the re in the request, the the query paras filter, you provide the filter in the in in behind.
+
+33:44
+He will get the request and make the the query on the database to make the filter and returns you the results of this.
+
+33:58
+It's not you but but in the end, this means when you write this code, this code gets injected into the request processing, right?
+
+34:06
+It is something that influences our public api to have this code, right?
+
+34:13
+Yes.
+
+34:14
+OK.
+
+34:14
+That was my question.
+
+34:15
+Thank you.
+
+34:15
+Now I get it.
+
+34:16
+Thanks.
+
+34:18
+So we just have to be aware when we write code like this.
+
+34:21
+This is our, our influences our public api s this influences what does, how can someone talk to our application from outside of of the back end?
+
+34:33
+Yes.
+
+34:33
+And and also it's already secured in in behind because if you, you want to to make scale injection will refuse.
+
+34:47
+Yeah.
+
+34:48
+What I'm more concerned about is OK.
+
+34:50
+We have filter here.
+
+34:51
+But you also talked about other things, right?
+
+34:53
+Not just filter which allowed includes, for example, this makes this, for example, would make more data available than if it wasn't you right.
+
+35:05
+Yes.
+
+35:06
+If yes, it it was not sent.
+
+35:09
+For example, the you know that the permission group has has belongs to permissions.
+
+35:19
+So if you, you just for example, I mean, if on a page on, let's say that on the permission groups, permissions group page, you just want the permission groups without the permissions itself data, you just if you will just do get you if I was setting the include.
+
+35:47
+But if at from, from just one request you, if, if you want to get the permission groups and also the the corresponding permissions, you can make a set includes and, and, and set that if you want the permissions to be included.
+
+36:11
+Yeah, yeah, I get you.
+
+36:12
+But we are what, what I didn't understand before because before you talked about this file as it, if it's about the database access.
+
+36:20
+But in my view, really, it's not about the database access.
+
+36:23
+It's, it's about defining, for example, now you have this permission group table and it has a reference to the permissions table, right?
+
+36:33
+Yes.
+
+36:34
+So when we want to control what may the user access, maybe we don't want the user to be able to access the permissions table.
+
+36:43
+Maybe there is secret data in there or something.
+
+36:46
+In this case, we use this file to define what can the user access and what can you not access?
+
+36:52
+So, from my perspective, this is the most important part about this file.
+
+36:58
+Yes, exactly.
+
+36:59
+And also it's also, it, it's also works together with the permissions that we defined.
+
+37:10
+And so if, for example, let's say on, on permissions page, for example, the user that is don't have access to permissions, it will also refuse, it will OK.
+
+37:29
+So it does that automatically, it handles the OK?
+
+37:33
+I didn't see, I didn't know that that, that of course, changes it again because then we are more secure if this automatically ensures the user has permissions to access each data referenced here.
+
+37:43
+OK.
+
+37:44
+That's good.
+
+37:47
+And besides the filter and, and includes it, it also has the sorts to sort the the response data if you want to sort by name, for example.
+
+38:06
+And so on here, we didn't add it but it's also allow it.
+
+38:12
+And if you go to the package, you can see all the filtering.
+
+38:17
+So sorting, including fields, that's also important.
+
+38:22
+OK.
+
+38:22
+That's what I was asking.
+
+38:23
+So good.
+
+38:24
+This means here, we have a, a very powerful solution to have our routes exactly as we need them.
+
+38:32
+But we don't have to manually implement it in code.
+
+38:34
+We can just use this package to say what should be available to select and so on.
+
+38:40
+Ok, nice.
+
+38:42
+I like it.
+
+38:45
+See, you can convince me that that is good if you show me stuff like that.
+
+38:52
+I bet it is very good.
+
+38:56
+So, that is what we, we, we have done so far about for the api sorry, but you feel like that is what we've done so far and I, I want to add something what we did there is not final because on the future we'll need, we, we, we didn't add all sorting, filtered and field attributes on, on every, every route.
+
+39:35
+So by that, but I understand Pavlo.
+
+39:38
+Yeah, since you have this package, it means if I now go on the client and I notice I need this extra filter or something, it will be very fast for you to add it.
+
+39:48
+Right.
+
+39:49
+Yes.
+
+39:50
+Yes.
+
+39:50
+That's what I, I wanted to explain.
+
+39:52
+Ok.
+
+39:53
+Yeah.
+
+39:55
+Yeah, I think it's good.
+
+39:57
+Yeah.
+
+40:03
+So that's it.
+
+40:10
+ok, Simon, are you still there or he left?
+
+40:15
+No, you see Simone?
+
+40:26
+Maybe he's having issues.
+
+40:29
+Yeah, maybe just maybe his uncle.
+
+40:38
+oh, ok.
+
+40:45
+maybe, maybe I can just ask them but you figuring it out.
+
+40:51
+So my impression to be honest and it's, it's not to, to, to criticize you or anything, but I think we just need to be clear.
+
+41:00
+My, my impression you have no, a lot of the base of the lave implementation is well done like the foundation, but in my view, it is still a good way away from being finished.
+
+41:16
+Right?
+
+41:19
+Oh, you mean our A P A implementation or travel in, in general and no, sorry, I, not in general.
+
+41:30
+I meant like what you're, you're creating the back end and I think you're still a good way from being finished with the back end.
+
+41:37
+Right?
+
+41:37
+Yes.
+
+41:38
+Yes.
+
+41:38
+Right.
+
+41:39
+OK.
+
+41:41
+So can you maybe also for Simon give an estimate of how much still needs to be done?
+
+41:52
+Yes, yes, we can, can do that.
+
+41:55
+We have the the degree microservice to, to, to to implement and then, and then connect it with with the API and also we have the translation that also we have, we, we already have implementing a part of that but the there is missing some logic that we will add also to it and also connect with the mailing app and, and, and I think that we went on, we, I think it will be good.
+
+42:40
+Also, we I, I already started implementing the connection with AC R PC that we we will be using to communicate with the real time service.
+
+42:54
+And also the pig service if needed.
+
+43:02
+So that's in some I will I will make a list of all things that we remain, remains to do and also set on estimation.
+
+43:16
+Ok.
+
+43:17
+Regarding the Microsoft, I'm sorry, I just as you know, there was a lot going on, I had vacation and then three weeks off he does emergency.
+
+43:28
+So I really didn't get to it, but I would try to get to it as soon as possible.
+
+43:34
+I, I also wanted to ask about the the progress.
+
+43:40
+What I noticed I didn't look much at, at your back end, but I did have a look once.
+
+43:46
+one thing I noticed is I looked for seo search engine optimization in the whole code base and I couldn't find it.
+
+43:52
+And that was a bit confusing to me because I thought you had already transferred the whole Taras database structure into the, the Rael application.
+
+44:04
+So I'm not sure.
+
+44:05
+Is there still something left to do regarding having everything from the database diagram in the code?
+
+44:19
+Yes.
+
+44:20
+We there is things that that is not complete about it.
+
+44:25
+What we, we did is is that we take for example, an area and we finish with that, we take an area and we work we work about it and at first we, we, we identify entities that will, that is shared that is required by another entities and we implemented them first and, and before starting working on on view.
+
+44:58
+So about the sco yes, it will be added.
+
+45:04
+I think that if I'm not wrong, we, I'm sorry.
+
+45:13
+No, we, we did not make anything about su yet.
+
+45:16
+We did not yet.
+
+45:19
+OK.
+
+45:19
+Maybe that was just coincidence then because SESEO is one of the first client pages we implemented.
+
+45:26
+So come, came up early for me to look at it and I guess for you, it's one of the last things you, you will do.
+
+45:36
+OK.
+
+45:36
+Yeah.
+
+45:38
+And the other question I had is because I don't think you have used caching almost anywhere yet, right?
+
+45:46
+No, we don't.
+
+45:48
+we have not used it yet, but for short, we feel that there are parts that will be using cash, I mean caching is in but is not not as a because it, because it is api a we don't know.
+
+46:07
+So asset cash in the bed, but we will for sure, for example, if I can set say about let's say what, for example, with the the term, for example, that I think it will be a, I think that will be assessed assessed frequently.
+
+46:31
+So maybe something like that, that need to be cast, you will be using C Yeah.
+
+46:39
+What I think we have to think about, I don't know how to do it yet, but when we have pages like the auction page or something, they are, basically, everyone sees the same thing we also have to think about.
+
+46:53
+Is there a way to cash the whole page basically?
+
+46:57
+And, and just when, when in the same 2nd 20 users access this page always send them the same response because it, it hasn't changed.
+
+47:06
+We should think about that as well.
+
+47:09
+I think that's good to think about that.
+
+47:11
+Yeah, important.
+
+47:14
+Yeah.
+
+47:14
+about this part.
+
+47:15
+I, I think we, we did not start working on the, the client front route MB I route yet for the moment.
+
+47:27
+It's all about admin route.
+
+47:30
+So what we planned is after finish or after achieve some goal, we, we define ourselves, we will make a, a document to, to identify where we will put cashes and to make it more structured and to not forget to clear cash to delete the cash on this place or not.
+
+48:01
+So that's why for the moment we do not put any, any cash anywhere, but for sure it's planned.
+
+48:10
+But yeah, I mean, that's an important point to mention Pavlov if you say you have for now implemented only the routes for the admin part.
+
+48:19
+I think that's a good approach because on the admin part, we have less performance issues that it should still perform that, of course, but it won't be accessed by as many people.
+
+48:32
+So if you first implement this part, we can learn more about how we do it.
+
+48:38
+And then when we do the front end, what the user sees, we can basically plan it better and make it more optimized.
+
+48:46
+That's a good point.
+
+48:47
+But also for the progress, of course, it means we are right now more focused on the admin part and the user part is still a to do, right.
+
+48:56
+Yes.
+
+48:57
+And it's because most of the user front parts will not be much work for us than the other in part because the on the front end part, it will be only get, get request done or most get request than post or update request.
+
+49:24
+Yeah, except some small parts like the profile maybe.
+
+49:27
+Yes.
+
+49:28
+Yes.
+
+49:29
+Right.
+
+49:30
+Well, but yeah.
+
+49:31
+Yeah.
+
+49:31
+But also also a big part of the new project is the communication between Auer and, and user, et cetera.
+
+49:38
+There is a lot.
+
+49:41
+But there is much more than in our old system now that they also you know, send messages here or stuff like this.
+
+49:49
+Yeah.
+
+49:51
+But from our perspective, something like that, it's like a small isolated thing that OK.
+
+49:58
+Yeah.
+
+50:06
+Yeah.
+
+50:09
+So about the status about the status of team Benin.
+
+50:15
+Is it, is it clear now for you Christiane to understand where they stay or is it, is there are things which are not clear yet, what is done already and what needs to be done done?
+
+50:28
+For me?
+
+50:28
+It's clear.
+
+50:29
+I just think I just think it will still be a while of development to finish everything, which is also what I expected Right here.
+
+50:42
+Right.
+
+50:43
+So, so for me to get an idea, 100% is what is the goal and how many percent we are with the team benign yet?
+
+50:59
+Or you can, you can you can split it on, on on back end or no, on admin and on front end, how many, how many is finished yet?
+
+51:13
+And, and, and how many percent this is miss is missing so that I just get a little bit an idea about the front, the front end.
+
+51:24
+We, we, we don't have yet set any any code.
+
+51:29
+But yes, there is there is basis that there is, there will be showing but the admin part we, we have done the most the most of of the, the work in the, I mean, there is just small to do compared to what we, we, we had from the beginning because for example, we don't yet implement the the documents mapping.
+
+52:04
+For example, there is not yet that is not yet done.
+
+52:10
+And, and for example, I, I will say that for the admin part, I will say that we, we are eight, I can say 80 done.
+
+52:27
+Yes, I think we can take this 80% and we can say we have 100% and then we can add 30% on top again because I think even when you are done completely and we start implementing the whole integration of the client and back end, we will have more work again because there will be some things we have missed or some things we didn't think about or some things that need to be done differently.
+
+52:51
+Yeah.
+
+52:51
+Yeah.
+
+52:52
+Different.
+
+52:53
+Yes.
+
+52:54
+And also we will need to, to wait for about the discussion we made with the Rumina.
+
+53:05
+I think yesterday of the day before and she, she need to, to get back to, to us about some parts of the mock up.
+
+53:17
+So we will update the code accordingly.
+
+53:20
+Yeah.
+
+53:21
+Right.
+
+53:21
+Yeah.
+
+53:21
+She was not, she was not in the office yesterday.
+
+53:26
+OK.
+
+53:27
+And so what, what is important to me is what Christian was saying before that if possible, all static parts out of the front end should be somehow be cashed, whatever in which way I have no idea how it works.
+
+53:46
+But, but that's normally the best way in the new system, we will have many, many real time features and probably also in the admin part, there are many things which will many informations be up more, more many more information than we have.
+
+54:06
+Now, when we, when we do a, when we do a beat up and what, what we can see in admin.
+
+54:13
+So my question is how do we, is it a possibility to split, you know, cashed html code or whatever or images to split it really from the real time, real time data that the user is seeing.
+
+54:33
+So real time data are something like more separate and can be optimized until the limit, you know.
+
+54:41
+So we we we are sure there is a smooth flow and and real time data are really fast and all the time they are 100% the same on every, on every browser etcetera.
+
+54:52
+Is there is there a concept which makes this possible, what real time data do we have other than relating to auctions and bids?
+
+55:09
+Well, well, these are datas which just for example, what we did in the last two days with, with Letizia loads that are in bid up are shown on admin but direct under the load is showing the users that have bid already on the loads and which users are online means which users are logged in et cetera.
+
+55:36
+There is there is just yeah, just several things that are more to see.
+
+55:42
+The the question is if there is a concept even for these users, which are online.
+
+55:47
+we have real time and we have real time, right?
+
+55:49
+So for a bit, it must be incredibly accurate because it's like milliseconds can ma which bit came first and so on.
+
+55:59
+So every time a is really important when you have, when you have these users who are online, then when you have half a second delay or one second delay and maybe on one screen, you see it half a second later on the other screen or something like that, right?
+
+56:15
+I think this is not a big issue, right?
+
+56:17
+No, it's not the issue.
+
+56:18
+But what I feel now with our system somewhere is a bottleneck when we have 100 and 50 users locked in and on the dashboard, you see the users coming in and then you want to reload the site because you don't see the the users that are moved.
+
+56:32
+So you want to have an actual status, the site just don't load no more.
+
+56:36
+Yeah, this is, and this and these are points that are very important that you know, they, they, they are all the time connected and, and stuff like this is easily working because because what will come to the system much more when let's say we, we have a date where we go online with the new system, then there may be 30% which is real time, right?
+
+57:03
+But in the future, what we're gonna develop will be much more real time that when we start.
+
+57:09
+And this is why the concept for real time needs to be somehow really in the best way possible.
+
+57:18
+Yeah, but in my opinion, you guys can correct me if I'm wrong in lava there.
+
+57:23
+We have this broadcasting and depth so implementation.
+
+57:29
+And in my view, this should be enough for everything that is not related to bits, right?
+
+57:34
+Like which users are online and so on.
+
+57:37
+We can do this with Lael, right?
+
+57:40
+Yes, about what Simon.
+
+57:42
+Simon is talking, I already have a solution for, for that.
+
+57:48
+And I think that if we do it in like the same way we have our scheduler in done, we have an application for on that will keep the authenticated user or online users in memory and man manage it.
+
+58:14
+It will be more afraid like than what we have now because what we have now in the concept, the way that it is it was done in LA is that when we have a user that is advocating beside the pages, it will it will be, the user is will be seen like logged out and when he is on the page again, it will be logged in and so on.
+
+58:48
+So that is what we had in the beginning.
+
+58:51
+But we, we change it and so on.
+
+58:55
+But I, I already have an, an idea for, for this.
+
+59:00
+So it will be very real time when Eric.
+
+59:06
+But if, if you say, if you say we should do it in not in the, but in something like a schedule application, then I would just add more functionality to this real time microservice, which is 100% what we have to do after hearing this, this is 100% what we have to do because, because you have to think about, we may have 1015, 20 auctions running the same time ending.
+
+59:30
+This is where we're going to go for.
+
+59:31
+Very sure.
+
+59:33
+It cannot be that there is a bottleneck in real time.
+
+59:36
+This is something which, and if Lara Valda is not specialized in any way on, on situations for this, then we have to, then, then we have to make this exactly what Christian was saying.
+
+59:48
+And what the most part that I was explaining is that the the respon about to know really what who is online and so on.
+
+1:00:04
+It is about the the reactant service itself.
+
+1:00:11
+because when we we initialize a real time as connection, it is known by by soccer or pusher or, or, or any, any fair time service.
+
+1:00:26
+So that information is is is with the service that handle the time service and to get information about the load that at the low or b of the users here, It will make a request to the application to get or to gather that information and keep it until the U user has all has really logged out.
+
+1:00:59
+Maybe.
+
+1:01:00
+Hm.
+
+1:01:01
+Yeah, it, but I could, I would also say, I mean, we, we can move parts to the sweet time microservice.
+
+1:01:08
+I was just thinking that when we have all these Ain pages and so on, of course, we can implement all that functionality, we can push it over the real time service.
+
+1:01:20
+But I just think that when it just comes, you're on the Patriots or the users, for example, who are logged in, you can of course get that information from the real time service.
+
+1:01:30
+But to push this information out to the users in my view, it would be less complex faster to code if you can just use the lave broadcasting mechanism for this, not the real time mechanism.
+
+1:01:45
+Do you get what I mean?
+
+1:01:47
+Yes.
+
+1:01:48
+Ok.
+
+1:01:50
+But we need, but we need to be very, very sure that, that, that this is really in the big way that we think easily handle handling and, and for very sure, I don't want to have a bottleneck in this, in, in the real time stuff because this, this is gonna be the biggest part of the system in the future.
+
+1:02:10
+Yeah.
+
+1:02:11
+Yeah, for sure.
+
+1:02:12
+I mean, I will keep this in mind, we have to still look at different solutions and and see what limitations there are.
+
+1:02:20
+Yeah, this is and that, that's you talk about limitations from lot of side, right?
+
+1:02:26
+That is very important that that's really this part is very important because if we have later to change this again, then we have a problem because we have to touch the heart of the system.
+
+1:02:39
+OK?
+
+1:02:41
+I'm just always thinking because what I want is we have La Rave and, and as we just saw in the discussion before Lave always comes with existing solutions to problems that we will always have.
+
+1:02:55
+and it makes it much less, it might, might make it less work and also it makes it less danger that when we build our own solution, something goes wrong.
+
+1:03:05
+You're right.
+
+1:03:05
+So I'm always looking that we can use a solution in the cases where it works.
+
+1:03:12
+We need more, we should build it ourselves.
+
+1:03:14
+Yes, exactly.
+
+1:03:15
+This is, this is very, very important for the new system that we do it this way where there is nothing really where, where Lael is perfect for what we need.
+
+1:03:26
+We have to somehow sort it out and everything which La Rael is good for, for sure.
+
+1:03:32
+It's the right way to do it because it's more secure and, and, and less work, et cetera.
+
+1:03:38
+But things and, and their team benin, you also really have to be honest on, on, on the way when, when you see this could be a bottleneck from the Lara side, then you need to cooper and, and tell Christian about it.
+
+1:03:53
+This is very, very important that, that it's not, you know, it's not about not to do it with La Ravel.
+
+1:04:00
+This, this is what you hear now from Christian.
+
+1:04:02
+Also, very clear.
+
+1:04:04
+It's absolutely he, he, he, in the meantime, I have the feeling he can work very well with, with, with the La Ravel solutions.
+
+1:04:11
+But when there is a La Ravel bottleneck or, or that can become a problem for us in the future, we really need to talk about this now and, and not, and not one is too late.
+
+1:04:22
+OK.
+
+1:04:28
+Mhm.
+
+1:04:29
+Yeah.
+
+1:04:30
+OK.
+
+1:04:31
+Fine.
+
+1:04:32
+OK.
+
+1:04:34
+Are there any other questions any other questions T Benin to, to Christiane that you wanted to ask already for the last month Christian did, did did you talk, did you talk to the team about, about the solutions that you did with Thiago and Anderson so that they understand the way that, that, that you'd like to have it in, in front end, how, how you connect the design.
+
+1:05:13
+So, so where, where, where the point is where they come in to connect it to Lara.
+
+1:05:19
+I'm not ready yet.
+
+1:05:20
+I've been working on, on the concept the last days.
+
+1:05:24
+It's pretty far, but I still need to complete it and then OK, I can have another call about it.
+
+1:05:31
+OK.
+
+1:05:31
+That's good.
+
+1:05:33
+That's good because I think this is also an important point to, to inform everybody about and discuss and, and discuss it the, the, the plus and the minus.
+
+1:05:44
+Yeah.
+
+1:05:44
+But, but what I can already say is now that I've seen this on the server side, how we build the filters and so on.
+
+1:05:52
+From my perspective, we will have really good flexibility in the end, but we can very easily just put together for a specific page like the list of sites or the details of the sites or whatever we can.
+
+1:06:06
+Just in a few minutes.
+
+1:06:07
+I think actually on the server side, put together the route for that on the client side to put together the logic to get the data and to push the data when you submit it, I think it will be extremely efficient the way we have done it on both sides now, I think it will work well.
+
+1:06:26
+Right.
+
+1:06:28
+Right.
+
+1:06:32
+One second.
+
+1:06:37
+OK.
+
+1:06:38
+OK.
+
+1:06:39
+Fine.
+
+1:06:40
+You already have OK.
+
+1:06:42
+Not, never mind when we will be done with the concept.
+
+1:06:48
+you have documentation that explain it so we can more understand about it.
+
+1:06:56
+Yeah, I agree.
+
+1:06:59
+OK.
+
+1:07:03
+That he said it will be very simple, but of course, you should still have our documentation.
+
+1:07:12
+Yeah, it's mainly mainly about the concept which is behind.
+
+1:07:15
+So be because I think Christiane, what you wanna do is that that it's for the whole system the same way that it's handled.
+
+1:07:23
+Right.
+
+1:07:24
+Yeah.
+
+1:07:24
+And especially I want to do it.
+
+1:07:26
+So, because I know this will all come all the time, but then this should be, look in a different way and this field should have a different text or whatever.
+
+1:07:35
+I just want to do it.
+
+1:07:36
+So, the astro logic below it, how it works, it can stay the same even if you change how something looks in Dy or something makes sense.
+
+1:07:54
+Does it make sense to you, Eric?
+
+1:08:00
+Yes.
+
+1:08:01
+have to when he will be done, we can understand more about it and the discussion if about it.
+
+1:08:14
+Yeah, I created on confluence.
+
+1:08:16
+I did the documentation.
+
+1:08:19
+OK.
+
+1:08:19
+There is one point that I discussed with Christian, I think yesterday or the day before that for that we can take out of horse 24 a category, let's say it's Spanish horses.
+
+1:08:35
+and say for Spanish horses, we will have its own domain and it will not show on horse 24 but still belongs to the to the horse 24 project.
+
+1:08:46
+Does this make sense to you?
+
+1:08:48
+Can I can I explain it in more detail?
+
+1:08:51
+Yes.
+
+1:08:51
+Yes.
+
+1:08:51
+So, from what I understood, it's not like to have a completely separate in the sense of it's a different system or something, but I understood it in the sense that basically it's, it's like a different way to view our, our, our horses or whatever that you can have,,, a child site where when you go through it automatically, it's always filtered.
+
+1:09:15
+Only these horses are displayed or these looks are displayed or whatever.
+
+1:09:18
+, exactly.
+
+1:09:20
+Yeah, exactly.
+
+1:09:22
+This is also from the point, from the point of,, of sale and from the, from the,, search machines that we can say, well, dressage horse might be a category on horse 24.
+
+1:09:36
+But we will also have a domain called Dressage horse.com.
+
+1:09:41
+And, but on Dressage horse.com, we will just teach dressage horses.
+
+1:09:45
+And this is the same for a special type of horse.
+
+1:09:49
+Let's say it's a racehorse or it's a Spanish horse.
+
+1:09:52
+So that we can say that we can,, that we can select by a filter.
+
+1:09:59
+Let's say we have a domain called Spanish horses.
+
+1:10:03
+And we say just by filters, just show everything about the category Spanish horses.
+
+1:10:12
+And on the other side, we can say on horse 24 show everything that we have.
+
+1:10:18
+But by a filter, we decide, don't show Spanish horses.
+
+1:10:23
+You understand what I mean?
+
+1:10:25
+Listen, listen and, and, and in the concept that you have thought about it, is this a part of it?
+
+1:10:35
+Yes.
+
+1:10:36
+As we,, all we, we are doing is about a P A.
+
+1:10:41
+The way that I understand what you, you just, I said is that we will have, for example,, we just have to to implement another clients.
+
+1:10:54
+And as with the client that we have server side rendering, it will just do a a filter by the category.
+
+1:11:07
+And, and only that category information will will be shown on this on, on that side.
+
+1:11:15
+Anything else?
+
+1:11:17
+Yes or does not show on horse 24.
+
+1:11:21
+Exactly.
+
+1:11:23
+So that, that's an important point.
+
+1:11:26
+And, and then there is one more thing can you describe because this is a very big important point on the new system.
+
+1:11:35
+Can you describe our single side will be created?
+
+1:11:40
+I'm talking about a single side which our, our competitors the way that they sell their auction platform.
+
+1:11:50
+So single site starts with zero users and there needs to be the possibility that we can say, ok, a user on their single site and register for their auction and can also choose to be registered the same time on horse 24 or the single side will say, ok, nobody can register for horse 24.
+
+1:12:15
+It's just especially for the single side or we can decide and say all users that are registered on the single site automatically will register for horse 24 but not for this, for this single site.
+
+1:12:29
+Can you say something about the way that a single auction site will be, will be created?
+
+1:12:37
+Because this is what I gonna go very fast on the market to go against my competitors to, to give many as many possible stables,,, a single site to do their own options.
+
+1:12:52
+But it needs to be the three different ways when user is registering.
+
+1:12:57
+What concept do you have for this?
+
+1:12:59
+, yes.
+
+1:13:03
+, as we talk about it,, before we had,, two different,,, suggestion.
+
+1:13:12
+, the first was that,,, obviously the,, the final, decision that we, we talked about was that if as it will be possible for for the single site.
+
+1:13:30
+For example, if you choose, for example, that the eight users can also register on host 24.
+
+1:13:39
+It means that that single set will will be part of our infrastructure in infrastructure.
+
+1:13:49
+And that is not a problem and we can make it, we can handle it.
+
+1:13:56
+But the second option that we talk about and I don't and I remember, I remember that we we, we choose to not go that way was that for example, if if the owner want, I mean, the owner of that single set wants to have it on his own infrastructure.
+
+1:14:23
+It means that it is not possible for you to to to set an option that you its users can also register on house 24 and, and have a control of it for sure they can come to house 24 and do regis registration.
+
+1:14:47
+That is not a problem.
+
+1:14:49
+But if the rule that is behind the idea that that a single set can control that it, its users will cannot be registered on host or on will not belongs to you or that hold is no more.
+
+1:15:11
+Yes, but I'm but, but what I I, what, what, what do you say?
+
+1:15:16
+What do you mean when you say it's not in our infrastructure as for example, if he choose to have it single a set for example and, and, and have it installed in its own account, account on it or maybe on no, but about this, we have never talked this, this, this was never the plan to, to, to have to have a single, to have a single side the way that they install it in on their own aws infrastructure that, that, that we never have talked about it every single time.
+
+1:15:54
+I think we talked about it to be honest, but I think we talked about many things and we are getting confused, to be honest.
+
+1:16:01
+But this is this, this was never what I, what I wanted to have it.
+
+1:16:05
+They, they will be, every single site will be part of, of the horse 24 infrastructure, different things in the past, but it doesn't matter.
+
+1:16:16
+No, I mean, I agree.
+
+1:16:17
+We should do it this way if we do it different.
+
+1:16:21
+That makes no sense because nobody will pay for that are setting up the whole system on a different infrastructure.
+
+1:16:27
+That, that's, that's impossible because what a single side will be.
+
+1:16:31
+It's a very cheap version of a 24 I think Simon, what you wanted is that maybe someone can, can pay to buy the whole system and, and create their own or something.
+
+1:16:42
+Yeah, but that is something very different.
+
+1:16:44
+This is what I talked about when I, when when when we decided that we make a platform for a product group, this will be one big platform and tomorrow we will have one big platform for cars and then for pigeons that that's for sure.
+
+1:17:00
+This has to work.
+
+1:17:01
+This is an absolutely must must have for the new system but it has nothing to do with a single side.
+
+1:17:08
+Nothing that had absolutely nothing to do.
+
+1:17:10
+A single side at the end is a light version of a child side.
+
+1:17:14
+Yeah, I think what we need in the end is basically in our user concept, we should have something like user pools that we have different groups of registrations that can maybe even have the same email, right?
+
+1:17:27
+Or or do you not need assignment?
+
+1:17:29
+So if someone sets up an isolated single site, should it be possible for them to register with an email that is already registered in horse 24 or should be the same user pool.
+
+1:17:40
+No, if they are already registered on horse 24 they just can log in.
+
+1:17:44
+We need to show them they are already registered for horse 24.
+
+1:17:48
+So they direct can log in.
+
+1:17:50
+This is not the point, the point for me is that and, and this must be also for any single side.
+
+1:17:56
+If a user is registered on horse 24 he automatically can lock in.
+
+1:18:00
+And if he tried to register, it needs to show up that he's already already registered on horse 24.
+
+1:18:06
+What I'm saying is that, that they, they will build up their own user pool and they can decide when they buy a single auction platform from me.
+
+1:18:17
+They can decide if they want to have started from zero or if they are part of horse 24 because this will be very different prices and the most of the single sides will not be part of the horse 24 auctions will not be shown on horse 24 that they do.
+
+1:18:35
+Yeah, we should always have different, different concepts.
+
+1:18:40
+We have part of horse 24 in terms of the same user logins and password.
+
+1:18:46
+And we have part of horse 24 in terms of we show their AEM on our page or something like that.
+
+1:18:54
+Yes.
+
+1:18:55
+Exactly.
+
+1:18:56
+Exactly.
+
+1:18:57
+Yeah.
+
+1:18:58
+So we should, but you're saying the same user and password, the same email and password is always we don't have a different, right?
+
+1:19:06
+No, we don't have a different.
+
+1:19:07
+OK.
+
+1:19:08
+Then it's just the, the question, where do we show what, where do we show which oxygen, which load, which bits and so on?
+
+1:19:16
+Yes.
+
+1:19:17
+And yeah.
+
+1:19:17
+Exactly.
+
+1:19:19
+Exactly.
+
+1:19:19
+But this, this is because for me, a single side is a light version of a child side.
+
+1:19:27
+It can add, add its own domain but it's, it's, it's a light version of, of, of a child side of horse 24.
+
+1:19:36
+So, and, ok.
+
+1:19:37
+But, but Tim Benin at the end, you thought about this, right?
+
+1:19:41
+And this is the way it can be handled.
+
+1:19:44
+Yes.
+
+1:19:46
+All all about all about this is it will be handled by by settings.
+
+1:19:55
+OK.
+
+1:19:55
+That's fine.
+
+1:19:57
+OK.
+
+1:19:57
+OK.
+
+1:19:59
+So is that from, from when, when, when you develop on the back end, is there anywhere anything that you feel it could be a bottleneck so far?
+
+1:20:12
+No, so far.
+
+1:20:14
+But what we've done?
+
+1:20:16
+So so far there is no butt neck eric, what happens if we have 1000 child sites and 1000 options at the same time?
+
+1:20:26
+That is not, that's not a problem.
+
+1:20:29
+OK.
+
+1:20:30
+Good.
+
+1:20:32
+OK.
+
+1:20:33
+Very good.
+
+1:20:34
+OK.
+
+1:20:35
+So from my side, this is all.
+
+1:20:39
+Yeah.
+
+1:20:40
+Thank you guys.
+
+1:20:41
+I think what you built, it looks really good.
+
+1:20:44
+I'm confident that we can continue like this sounds great out of your mouth.
+
+1:20:52
+What's that supposed?
+
+1:20:53
+To mean.
+
+1:20:55
+Yes, yes, for me.
+
+1:20:56
+I'm happy to hear this.
+
+1:20:58
+Yeah, I'm happy.
+
+1:21:01
+I want everybody to be happy.
+
+1:21:04
+Ok?
+
+1:21:04
+Thank you very much.
+
+1:21:06
+Thank you.
+
+1:21:07
+Thank you.
+
+1:21:08
+Thank you.
+
+1:21:08
+Bye bye bye now.

@@ -1,0 +1,32 @@
+- Define task
+- Create task history
+- Create questions
+- Gather context
+- Create subgoals
+- Access filesystem
+- Run commands
+
+Context:
+- Documents
+- Tasks
+- Question, answer pairs
+- Subgoal resolutions
+- Files
+- Recipes
+- Task history
+    - Command executions, results
+
+Building query:
+- Select relevant context items (human + automated)
+- Summarize them and verify summary by human
+
+Subgoal resolution:
+- Generate suggestion
+- Search actions for ways ro execute suggestion
+- Execute suggestion
+- Verify result (human + automated)
+- Append to subgoal history, check if subgoal completed
+
+Recipe:
+- Task / subgoal
+- Text description of solution
